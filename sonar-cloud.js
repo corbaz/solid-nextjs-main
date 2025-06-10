@@ -20,9 +20,13 @@ if (!fs.existsSync(cloudPropsPath)) {
 }
 
 // Leer configuración
-const configContent = fs.readFileSync(cloudPropsPath, 'utf8');
-const hasOrganization = configContent.includes('sonar.organization=') && !configContent.includes('TU_ORGANIZACION_AQUI');
-const hasToken = configContent.includes('sonar.login=') && !configContent.includes('TU_TOKEN_AQUI');
+const configContent = fs.readFileSync(cloudPropsPath, "utf8");
+const hasOrganization =
+  configContent.includes("sonar.organization=") &&
+  !configContent.includes("TU_ORGANIZACION_AQUI");
+const hasToken =
+  configContent.includes("sonar.login=") &&
+  !configContent.includes("TU_TOKEN_AQUI");
 
 if (!hasOrganization || !hasToken) {
   console.log("⚠️ Configuración de SonarCloud incompleta");
@@ -36,19 +40,19 @@ if (!hasOrganization || !hasToken) {
   console.log("   • Personal token (Account → Security)");
   console.log("5. ✏️ Edita sonar-project-cloud.properties");
   console.log("6. 🔄 Ejecuta de nuevo: npm run sonar:cloud");
-  
+
   console.log("\n💡 MIENTRAS TANTO:");
   console.log("   • SonarCloud analizará automáticamente en cada push");
   console.log("   • Ve reportes en: https://sonarcloud.io/projects");
   console.log("   • Usa SonarLint en VSCode para análisis local");
-  
+
   return;
 }
 
 try {
   console.log("🚀 Ejecutando análisis SonarCloud...");
   console.log("📤 Enviando código para análisis completo...\n");
-  
+
   execSync(`npx sonar-scanner -Dproject.settings=${cloudPropsPath}`, {
     stdio: "inherit",
     cwd: __dirname,
@@ -56,18 +60,19 @@ try {
 
   console.log("\n✅ ¡Análisis enviado a SonarCloud!");
   console.log("📊 Ve los resultados en: https://sonarcloud.io/projects");
-  
 } catch (error) {
   console.log("\n❌ Error en el análisis SonarCloud:");
   console.log("Esto puede deberse a:");
   console.log("  1. 🔑 Token incorrecto o expirado");
   console.log("  2. 🏢 Organization/Project key incorrectos");
   console.log("  3. 🌐 Problemas de conexión");
-  
+
   console.log("\n💡 SOLUCIONES:");
-  console.log("  1. 🔄 Verifica configuración en sonar-project-cloud.properties");
+  console.log(
+    "  1. 🔄 Verifica configuración en sonar-project-cloud.properties",
+  );
   console.log("  2. 🆕 Genera nuevo token en SonarCloud");
   console.log("  3. 🌐 Ve reportes automáticos en sonarcloud.io");
-  
+
   console.error("\n🔧 Error técnico:", error.message || String(error));
 }
