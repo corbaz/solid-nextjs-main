@@ -10,8 +10,7 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
   const { activeFaq, id, handleFaqToggle, quest, ans } = faqData;
 
   return (
-    <>
-      <div className="flex flex-col border-b border-stroke last-of-type:border-none dark:border-strokedark">
+    <div className="flex flex-col border-b border-stroke last-of-type:border-none dark:border-strokedark">
         <button
           onClick={() => {
             handleFaqToggle(id);
@@ -55,8 +54,7 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
         >
           {ans}
         </p>
-      </div>
-    </>
+    </div>
   );
 };
 

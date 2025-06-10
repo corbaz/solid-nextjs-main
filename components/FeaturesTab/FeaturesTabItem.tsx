@@ -6,8 +6,7 @@ const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
   const { title, desc1, desc2, image, imageDark } = featureTab;
 
   return (
-    <>
-      <div className="flex items-center gap-8 lg:gap-19">
+    <div className="flex items-center gap-8 lg:gap-19">
         <div className="md:w-1/2">
           <h2 className="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">
             {title}
@@ -24,8 +23,7 @@ const FeaturesTabItem = ({ featureTab }: { featureTab: FeatureTab }) => {
             className="hidden dark:block"
           />
         </div>
-      </div>
-    </>
+    </div>
   );
 };
 
