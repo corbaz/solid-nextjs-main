@@ -11,6 +11,7 @@
     "sonar:advanced": "node sonar-advanced.js",
     "sonar:real": "node sonar-real.js",
     "sonar:local": "node sonar-local.js",
+    "sonar:cloud": "node sonar-cloud.js",
     "sonar:report": "node sonar-report.js",
     "sonar:verify": "node sonar-verify.js",
     "sonar:clean": "node cleanup.js"

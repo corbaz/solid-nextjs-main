@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
+<>
     <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
       <div className="max-w-c-1235 mx-auto px-4 md:px-8 xl:px-0">
         <div className="flex items-center gap-8 lg:gap-32.5">
@@ -104,6 +105,7 @@ const About = () => {
         </div>
       </div>
     </section>
+</>
   );
 };
 
