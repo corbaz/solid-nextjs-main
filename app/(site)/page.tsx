@@ -6,8 +6,8 @@ import About from "@/components/About";
 import FeaturesTab from "@/components/FeaturesTab";
 import FunFact from "@/components/FunFact";
 import Integration from "@/components/Integration";
-import CTA from "@/components/CTA";
-import FAQ from "@/components/FAQ";
+import CallToAction from "@/components/CTA";
+import FrequentlyAskedQuestions from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
 
   // other metadata
-  description: "This is Home for Solid Pro"
+  description: "This is Home for Solid Pro",
 };
 
 export default function Home() {
@@ -30,8 +30,8 @@ export default function Home() {
       <FeaturesTab />
       <FunFact />
       <Integration />
-      <CTA />
-      <FAQ />
+      <CallToAction />
+      <FrequentlyAskedQuestions />
       <Testimonial />
       <Pricing />
       <Contact />

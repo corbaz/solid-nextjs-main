@@ -21,34 +21,17 @@ Este documento explica cómo usar los diferentes scripts de análisis de código
 
 ## 📋 Scripts Disponibles
 
-### 1. `npm run lint` - Básico (solo reporta)
-```bash
-npm run lint
-```
-- **Qué hace**: `next lint` (sin --fix)
-- **Reglas**: ESLint + Next.js
-- **Arregla automáticamente**: ❌ NO
-- **Uso**: Ver problemas sin modificar código
-
-### 2. `npm run sonar:check` - Rápido con arreglos
-```bash
-npm run sonar:check
-```
-- **Qué hace**: `next lint --fix` + consejos
-- **Reglas**: ESLint + Next.js
-- **Arregla automáticamente**: ✅ SÍ
-- **Uso**: Desarrollo diario
-
-### 3. `npm run sonar:advanced` - Estricto con arreglos
+### 1. `npm run sonar:advanced` - **Análisis Completo** (RECOMENDADO)
 ```bash
 npm run sonar:advanced
 ```
 - **Qué hace**: `next lint --max-warnings 0 --fix`
 - **Reglas**: ESLint + Next.js (cero tolerancia)
 - **Arregla automáticamente**: ✅ SÍ
-- **Uso**: Antes de commits/deploy
+- **Consejos educativos**: ✅ SÍ
+- **Uso**: Desarrollo diario y antes de commits
 
-### 4. `npm run sonar:real` - **VERDADERO SonarQube** 🆕
+### 2. `npm run sonar:real` - **VERDADERO SonarQube** 🆕
 ```bash
 npm run sonar:real
 ```
@@ -58,7 +41,7 @@ npm run sonar:real
 - **Uso**: Análisis completo de calidad
 - **Requiere**: SonarQube Server o SonarCloud
 
-### 5. `npm run sonar:verify` - **Verificar SonarLint** 🆕
+### 3. `npm run sonar:verify` - **Verificar SonarLint** 🆕
 ```bash
 npm run sonar:verify
 ```
@@ -66,7 +49,7 @@ npm run sonar:verify
 - **Uso**: Comprobar que SonarLint funciona en VSCode
 - **Genera**: `sonar-test-example.tsx` con problemas intencionados
 
-### 6. `npm run sonar:clean` - Limpieza
+### 4. `npm run sonar:clean` - Limpieza
 ```bash
 npm run sonar:clean
 ```
@@ -97,7 +80,7 @@ npm run sonar:clean
 
 ## 🚀 Workflow Recomendado
 
-1. **Desarrollo diario**: `npm run sonar:check`
+1. **Desarrollo diario**: `npm run sonar:advanced`
 2. **Antes de commit**: `npm run sonar:advanced`
 3. **Verificar SonarLint**: `npm run sonar:verify` (crear archivo de prueba)
 4. **Análisis profundo**: Usar **SonarLint en VSCode** (tiempo real)
@@ -116,3 +99,74 @@ npm run sonar:clean
 | **SonarLint VSCode** | ✅             | ✅                       | ❌        |
 
 **💡 Para el análisis MÁS completo**: Usa **SonarLint en VSCode** + `npm run sonar:advanced`
+
+## 🚀 Después del Push - SonarCloud Reports
+
+### **¿Qué pasa cuando haces `git push`?**
+
+1. **GitHub Actions se ejecuta automáticamente**
+   - Detecta el push
+   - Ejecuta el workflow: `.github/workflows/build.yml`
+   - Usa tu token: `d85d9dbea87f243f9c948432ec4918812f629702`
+
+2. **SonarCloud analiza el código**
+   - Aplica **TODAS las reglas de SonarQube** (no solo ESLint)
+   - Enfoque "Clean as You Code" - analiza código nuevo/modificado
+   - Genera métricas completas
+
+### **📊 Dónde ver los informes:**
+
+#### **1. GitHub (Status Checks)**
+```
+📍 Ubicación: Tu repositorio → Actions/Commits/Pull Requests
+✅ Status: SonarCloud Quality Gate (Pass/Fail)
+🔗 Link: Directo al reporte en SonarCloud
+```
+
+#### **2. SonarCloud Dashboard**
+```
+📍 URL: https://sonarcloud.io/project/overview?id=corbaz_solid-nextjs-main
+📊 Métricas:
+   - 🐛 Bugs: 0 (objetivo)
+   - 🔐 Security Vulnerabilities: 0 (objetivo)  
+   - 🔍 Code Smells: Cantidad detectada
+   - 📈 Coverage: % de tests
+   - 🔄 Duplications: % de código duplicado
+   - 🔢 Lines of Code: Total
+```
+
+#### **3. Notification en VS Code**
+```
+💡 SonarLint ya te muestra issues en tiempo real
+🔄 No necesitas esperar al push para ver problemas
+⚡ Feedback inmediato mientras codificas
+```
+
+### **🎯 Ejemplo de lo que verás:**
+
+#### **GitHub Actions (después del push):**
+- ✅ **SonarCloud analysis** - Build passing
+- 📊 **Quality Gate** - Passed/Failed
+- 🔗 **View in SonarCloud** - Link directo
+
+#### **SonarCloud Dashboard:**
+- 📈 **Reliability**: A/B/C/D/E rating
+- 🔒 **Security**: A/B/C/D/E rating  
+- 🔧 **Maintainability**: A/B/C/D/E rating
+- 📊 **Overall Code**: Pass/Fail
+
+#### **Detalles por tipo:**
+- 🐛 **New Bugs**: 0 (gracias a nuestras refactorizaciones)
+- 🔐 **New Vulnerabilities**: 0 
+- 🔍 **New Code Smells**: Posibles issues nuevos detectados
+- ⏱️ **New Technical Debt**: Tiempo estimado para arreglar
+
+### **🚨 Si hay problemas nuevos:**
+- GitHub mostrará ❌ en el commit
+- SonarCloud te dará detalles específicos
+- SonarLint en VS Code te guiará para corregir
+
+### **✅ Clean as You Code verificado:**
+- Solo analiza código **nuevo o modificado**
+- No te penaliza por código legacy existente
+- Enfoque en mantener calidad hacia adelante

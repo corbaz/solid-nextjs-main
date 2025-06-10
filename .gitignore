@@ -34,3 +34,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# SonarQube analysis files
+sonar-analysis-local.json
+.sonarqube/
+.scannerwork/
+sonar-test-example.tsx
+reports/
