@@ -1,0 +1,37 @@
+[
+  {
+    "component": "app/(site)",
+    "issues": [],
+    "status": "clean"
+  },
+  {
+    "component": "components/Header",
+    "issues": [],
+    "status": "clean"
+  },
+  {
+    "component": "components/Hero",
+    "issues": [],
+    "status": "clean"
+  },
+  {
+    "component": "components/Footer",
+    "issues": [],
+    "status": "clean"
+  },
+  {
+    "component": "components/About",
+    "issues": [],
+    "status": "clean"
+  },
+  {
+    "component": "components/Features",
+    "issues": [],
+    "status": "clean"
+  },
+  {
+    "component": "components/Blog",
+    "issues": [],
+    "status": "clean"
+  }
+]
