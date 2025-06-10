@@ -4,9 +4,8 @@ import SectionHeader from "../Common/SectionHeader";
 
 const Pricing = () => {
   return (
-    <>
+    <section className="overflow-hidden pb-20 pt-15 lg:pb-25 xl:pb-30">
       {/* <!-- ===== Pricing Table Start ===== --> */}
-      <section className="overflow-hidden pb-20 pt-15 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
           <div className="animate_top mx-auto text-center">
@@ -190,9 +189,7 @@ const Pricing = () => {
           </div>
         </div>
       </section>
-      {/* <!-- ===== Pricing Table End ===== --> */}
-    </>
   );
-};
+}
 
 export default Pricing;

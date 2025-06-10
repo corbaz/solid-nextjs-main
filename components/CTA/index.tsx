@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 
 const CTA = () => {
   return (
-    <>
-      {/* <!-- ===== CTA Start ===== --> */}
-      <section className="overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
+    <section className="overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
         <div className="mx-auto max-w-c-1390 rounded-lg bg-linear-to-t from-[#F8F9FF] to-[#DEE7FF] px-7.5 py-12.5 dark:bg-blacksection dark:bg-linear-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0">
           <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0">
             <motion.div
@@ -88,9 +86,7 @@ const CTA = () => {
           </div>
         </div>
       </section>
-      {/* <!-- ===== CTA End ===== --> */}
-    </>
   );
-};
+}
 
 export default CTA;
