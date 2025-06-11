@@ -82,7 +82,7 @@ const About = () => {
               </div>
               <div className="w-3/4">
                 <h3 className="text-metatitle2 mb-0.5 text-black dark:text-white">
-                  React 18, Next.js 13 and TypeScript
+                  Next.js 15, React 19 and TypeScript y Tailwind 4
                 </h3>
                 <p>Ut ultricies lacus non fermentum ultrices.</p>
               </div>

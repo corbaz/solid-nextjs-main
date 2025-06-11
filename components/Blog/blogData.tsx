@@ -16,28 +16,28 @@ const BlogData: Blog[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    _id: 2,
+    _id: 3,
     mainImage: "/images/blog/blog-03.png",
     title: "Tips to quickly improve your coding speed.",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    _id: 1,
+    _id: 4,
     mainImage: "/images/blog/blog-03.png",
     title: "Free advertising for your online business",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    _id: 2,
+    _id: 5,
     mainImage: "/images/blog/blog-04.png",
     title: "9 simple ways to improve your design skills",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
   },
   {
-    _id: 2,
+    _id: 6,
     mainImage: "/images/blog/blog-01.png",
     title: "Tips to quickly improve your coding speed.",
     metadata:

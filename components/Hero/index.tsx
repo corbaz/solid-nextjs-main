@@ -27,7 +27,7 @@ const Hero = () => {
               Solid Pro - Packed with all the key integrations you need for
               swift SaaS startup launch, including - Auth, Database, Sanity
               Blog, Essential Components, Pages and More. Built-winth - Next.js
-              13, React 18 and TypeScript.
+              15, React 19 and TypeScript y Tailwind 4.
             </p>
 
             <div className="mt-10">

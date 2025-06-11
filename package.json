@@ -11,7 +11,7 @@
     "sonar:clean": "node cleanup.js"
   },
   "dependencies": {
-    "framer-motion": "^12.16.0",
+    "framer-motion": "^12.17.0",
     "next": "15.3.3",
     "next-themes": "^0.4.6",
     "react": "19.1.0",

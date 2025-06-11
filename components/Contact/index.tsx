@@ -130,6 +130,7 @@ const Contact = () => {
                 </div>
 
                 <button
+                  type="submit"
                   aria-label="send message"
                   className="hover:bg-blackho dark:bg-btndark inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out"
                 >
@@ -178,7 +179,7 @@ const Contact = () => {
               <h3 className="text-metatitle3 mb-4 font-medium text-black dark:text-white">
                 Our Loaction
               </h3>
-              <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+              <p>Azcuénaga 2736, Mar del Plata, Buenos Aires, Argentina</p>
             </div>
             <div className="5 mb-7">
               <h3 className="text-metatitle3 mb-4 font-medium text-black dark:text-white">
@@ -192,7 +193,7 @@ const Contact = () => {
                     (window.location.href = "mailto:yourmail@domainname.com")
                   }
                 >
-                  yourmail@domainname.com
+                  julio.corbaz@gmail.com
                 </button>
               </p>
             </div>
@@ -204,11 +205,9 @@ const Contact = () => {
                 <button
                   type="button"
                   className="hover:text-primary transition-colors"
-                  onClick={() =>
-                    (window.location.href = "tel:+0094233463433843")
-                  }
+                  onClick={() => (window.location.href = "tel:+542235444si tal cual899")}
                 >
-                  +009 42334 6343 843
+                  +54 223-5-444-899
                 </button>
               </p>
             </div>
